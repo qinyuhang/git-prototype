@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+name = "git-prototype"
+version = "0.1.0"
+edition = "2021"
+members = [
+  "crates/blob"
+, "crates/commit", "crates/object", "crates/tree"]
+
