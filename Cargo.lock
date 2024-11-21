@@ -11,6 +11,9 @@ checksum = "512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627"
 [[package]]
 name = "blob"
 version = "0.1.0"
+dependencies = [
+ "object",
+]
 
 [[package]]
 name = "cfg-if"
@@ -19,8 +22,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cmd"
+version = "0.1.0"
+dependencies = [
+ "blob",
+ "commit",
+ "object",
+ "tree",
+]
+
+[[package]]
 name = "commit"
 version = "0.1.0"
+dependencies = [
+ "object",
+]
 
 [[package]]
 name = "crc32fast"
@@ -60,3 +76,6 @@ dependencies = [
 [[package]]
 name = "tree"
 version = "0.1.0"
+dependencies = [
+ "object",
+]

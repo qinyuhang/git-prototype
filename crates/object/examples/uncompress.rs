@@ -2,6 +2,7 @@ use flate2::read::ZlibDecoder;
 use std::fs::File;
 use std::io::{self, Read};
 
+// 这个文件不一定在哦
 fn read_git_object(sha: &str) -> io::Result<Vec<u8>> {
     // 构造对象文件路径
     let path = format!(".git/objects/{}/{}", &sha[..2], &sha[2..]);
@@ -23,7 +24,7 @@ fn read_git_object(sha: &str) -> io::Result<Vec<u8>> {
 }
 
 fn main() -> io::Result<()> {
-    let sha = "0bbf897d0812f11a47d9374188eaebfe7e71e783"; // 替换为实际的 SHA-1 哈希
+    let sha = "95db6b87121c1a2cd63762518be0c00635e8b502"; // 替换为实际的 SHA-1 哈希
     match read_git_object(sha) {
         Ok(data) => {
             println!("Decompressed data: {:?}", data);

@@ -1,0 +1,10 @@
+[package]
+name = "cmd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+object = { path = "../object" }
+tree = { path = "../tree" }
+blob = { path = "../blob" }
+commit = { path = "../commit" }

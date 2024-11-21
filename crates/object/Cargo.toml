@@ -3,5 +3,9 @@ name = "object"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "object"
+path = "src/lib.rs"
+
 [dependencies]
 flate2 = "1.0.35"
